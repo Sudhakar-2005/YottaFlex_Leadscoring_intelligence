@@ -1,0 +1,72 @@
+[run 1/2] scale=full seed=20261022
+2026-11-05T09:56:31+0530 | INFO    | yottaflex.pipeline | === STEP A: data generation ===
+2026-11-05T09:58:03+0530 | INFO    | yottaflex.pipeline | === STEP B: validation ===
+2026-11-05T09:58:03+0530 | INFO    | yottaflex.pipeline | === STEP B2: deduplication ===
+2026-11-05T09:58:07+0530 | INFO    | yottaflex.deduplication | lead duplicate pairs: 516
+2026-11-05T09:58:08+0530 | INFO    | yottaflex.pipeline | === STEP C: scoring ===
+2026-11-05T09:59:42+0530 | INFO    | yottaflex.scoring | scored 19484 leads at 2025-03-03T12:00:00
+2026-11-05T09:59:42+0530 | INFO    | yottaflex.pipeline | === STEP F/G: routing & assignment ===
+2026-11-05T10:01:08+0530 | INFO    | yottaflex.assignment | assigned=19484 unassignable=0
+2026-11-05T10:01:08+0530 | INFO    | yottaflex.pipeline | === STEP E/H: consent + follow-up tasks ===
+2026-11-05T10:02:20+0530 | INFO    | yottaflex.tasks | tasks created=14746 blocked=4738 skipped_cold=0 skipped_exists=0
+2026-11-05T10:02:20+0530 | INFO    | yottaflex.consent | blocked tasks for consent: 0
+2026-11-05T10:02:20+0530 | INFO    | yottaflex.pipeline | === STEP I/J: opportunities & stage history ===
+2026-11-05T10:02:37+0530 | INFO    | yottaflex.opportunity | opportunities created=2975 (primary=2975 natural_dupes=15 target remaining 2990)
+2026-11-05T10:02:39+0530 | INFO    | yottaflex.pipeline | === STEP K: baseline exception detection ===
+2026-11-05T10:02:48+0530 | INFO    | yottaflex.exceptions | detector opted_out_lead_contacted -> 0
+2026-11-05T10:02:50+0530 | INFO    | yottaflex.exceptions | detector score_uses_post_conversion_event -> 0
+2026-11-05T10:02:56+0530 | INFO    | yottaflex.exceptions | detector lead_assigned_outside_territory -> 0
+2026-11-05T10:02:56+0530 | INFO    | yottaflex.exceptions | detector duplicate_creates_duplicate_opportunity -> 15
+2026-11-05T10:02:57+0530 | INFO    | yottaflex.exceptions | detector stage_history_has_gaps -> 0
+2026-11-05T10:02:58+0530 | INFO    | yottaflex.pipeline | === ANOMALY INJECTION ===
+2026-11-05T10:02:59+0530 | INFO    | yottaflex.anomaly_injection | injected anomalies: {'opted_out_contacted': 20, 'temporal_leakage': 15, 'territory_mismatch': 15, 'duplicate_opportunity': 10, 'stage_history_gap': 15}
+2026-11-05T10:02:59+0530 | INFO    | yottaflex.pipeline | === STEP K: post-injection exception detection ===
+2026-11-05T10:03:07+0530 | INFO    | yottaflex.exceptions | detector opted_out_lead_contacted -> 20
+2026-11-05T10:03:09+0530 | INFO    | yottaflex.exceptions | detector score_uses_post_conversion_event -> 15
+2026-11-05T10:03:13+0530 | INFO    | yottaflex.exceptions | detector lead_assigned_outside_territory -> 15
+2026-11-05T10:03:13+0530 | INFO    | yottaflex.exceptions | detector duplicate_creates_duplicate_opportunity -> 25
+2026-11-05T10:03:13+0530 | INFO    | yottaflex.exceptions | detector stage_history_has_gaps -> 15
+2026-11-05T10:03:14+0530 | INFO    | yottaflex.pipeline | === STEP L: final analytics ===
+2026-11-05T10:03:33+0530 | INFO    | yottaflex.exporter | exported 34 files to C:\Users\acer\AppData\Local\Temp\tmpwyzm3ah2\run1\exports
+[run 2/2] scale=full seed=20261022
+2026-11-05T10:03:34+0530 | INFO    | yottaflex.pipeline | === STEP A: data generation ===
+2026-11-05T10:05:06+0530 | INFO    | yottaflex.pipeline | === STEP B: validation ===
+2026-11-05T10:05:06+0530 | INFO    | yottaflex.pipeline | === STEP B2: deduplication ===
+2026-11-05T10:05:09+0530 | INFO    | yottaflex.deduplication | lead duplicate pairs: 516
+2026-11-05T10:05:11+0530 | INFO    | yottaflex.pipeline | === STEP C: scoring ===
+2026-11-05T10:06:45+0530 | INFO    | yottaflex.scoring | scored 19484 leads at 2025-03-03T12:00:00
+2026-11-05T10:06:45+0530 | INFO    | yottaflex.pipeline | === STEP F/G: routing & assignment ===
+2026-11-05T10:08:01+0530 | INFO    | yottaflex.assignment | assigned=19484 unassignable=0
+2026-11-05T10:08:01+0530 | INFO    | yottaflex.pipeline | === STEP E/H: consent + follow-up tasks ===
+2026-11-05T10:09:06+0530 | INFO    | yottaflex.tasks | tasks created=14746 blocked=4738 skipped_cold=0 skipped_exists=0
+2026-11-05T10:09:06+0530 | INFO    | yottaflex.consent | blocked tasks for consent: 0
+2026-11-05T10:09:06+0530 | INFO    | yottaflex.pipeline | === STEP I/J: opportunities & stage history ===
+2026-11-05T10:09:22+0530 | INFO    | yottaflex.opportunity | opportunities created=2975 (primary=2975 natural_dupes=15 target remaining 2990)
+2026-11-05T10:09:24+0530 | INFO    | yottaflex.pipeline | === STEP K: baseline exception detection ===
+2026-11-05T10:09:33+0530 | INFO    | yottaflex.exceptions | detector opted_out_lead_contacted -> 0
+2026-11-05T10:09:35+0530 | INFO    | yottaflex.exceptions | detector score_uses_post_conversion_event -> 0
+2026-11-05T10:09:41+0530 | INFO    | yottaflex.exceptions | detector lead_assigned_outside_territory -> 0
+2026-11-05T10:09:41+0530 | INFO    | yottaflex.exceptions | detector duplicate_creates_duplicate_opportunity -> 15
+2026-11-05T10:09:42+0530 | INFO    | yottaflex.exceptions | detector stage_history_has_gaps -> 0
+2026-11-05T10:09:42+0530 | INFO    | yottaflex.pipeline | === ANOMALY INJECTION ===
+2026-11-05T10:09:43+0530 | INFO    | yottaflex.anomaly_injection | injected anomalies: {'opted_out_contacted': 20, 'temporal_leakage': 15, 'territory_mismatch': 15, 'duplicate_opportunity': 10, 'stage_history_gap': 15}
+2026-11-05T10:09:43+0530 | INFO    | yottaflex.pipeline | === STEP K: post-injection exception detection ===
+2026-11-05T10:09:52+0530 | INFO    | yottaflex.exceptions | detector opted_out_lead_contacted -> 20
+2026-11-05T10:09:54+0530 | INFO    | yottaflex.exceptions | detector score_uses_post_conversion_event -> 15
+2026-11-05T10:09:57+0530 | INFO    | yottaflex.exceptions | detector lead_assigned_outside_territory -> 15
+2026-11-05T10:09:57+0530 | INFO    | yottaflex.exceptions | detector duplicate_creates_duplicate_opportunity -> 25
+2026-11-05T10:09:58+0530 | INFO    | yottaflex.exceptions | detector stage_history_has_gaps -> 15
+2026-11-05T10:09:58+0530 | INFO    | yottaflex.pipeline | === STEP L: final analytics ===
+2026-11-05T10:10:16+0530 | INFO    | yottaflex.exporter | exported 34 files to C:\Users\acer\AppData\Local\Temp\tmpwyzm3ah2\run2\exports
+
+scale=full seed=20261022 - comparison results:
+  [PASS] row counts: total_rows=577308 vs 577308, tables=23
+  [PASS] file counts: 33 vs 33
+  [PASS] checksums (files): 33 files; diffs=none
+  [PASS] checksums (tables): 23 tables
+  [PASS] referential integrity: violations run1=0 run2=0
+  [PASS] validation reports identical: byte-identical JSON
+  [PASS] validation passed (both runs): run1=True run2=True
+
+REPRODUCIBILITY: PASS
+

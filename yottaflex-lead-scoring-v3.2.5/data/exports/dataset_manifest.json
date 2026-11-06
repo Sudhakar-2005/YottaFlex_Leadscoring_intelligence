@@ -1,0 +1,51 @@
+{
+  "base_datetime": "2025-01-01T00:00:00+00:00",
+  "business_id_formats": {
+    "activity": "ACT-LEAD-2026-000001-001",
+    "company": "CO-000001",
+    "contact": "CON-000001",
+    "lead": "LEAD-2026-000001",
+    "opportunity": "OPP-2026-000001",
+    "task": "TASK-LEAD-2026-000001-001"
+  },
+  "business_id_year": 2026,
+  "counts": {
+    "activity": 320971,
+    "anomaly_injection_log": 75,
+    "campaign": 30,
+    "company": 5000,
+    "consent": 57033,
+    "contact": 10000,
+    "duplicate_gt": 751,
+    "exception_record": 90,
+    "exception_resolution_history": 0,
+    "ground_truth_exception": 75,
+    "lead": 20000,
+    "lead_campaign": 16707,
+    "lead_score_explanation": 19499,
+    "lead_status_history": 90657,
+    "opportunity": 3000,
+    "product": 10,
+    "salesrep": 80,
+    "salesrep_product": 391,
+    "salesrep_territory": 202,
+    "score_rule": 14,
+    "stage_history": 13218,
+    "task": 19504,
+    "territory": 16
+  },
+  "heldout_fraction": 0.3,
+  "natural_duplicates": {
+    "companies": 60,
+    "contacts": 150,
+    "leads": 400,
+    "opportunities": 15
+  },
+  "seed": 20261022,
+  "targets": {
+    "companies": 5000,
+    "contacts": 10000,
+    "leads": 20000,
+    "opportunities": 3000
+  }
+}

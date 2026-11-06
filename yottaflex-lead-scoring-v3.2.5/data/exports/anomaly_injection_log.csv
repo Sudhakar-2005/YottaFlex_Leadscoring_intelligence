@@ -1,0 +1,76 @@
+injection_id,issue_type,target_entity,target_record_id,related_lead_id,injected_at,gt_label,details_json,affected_business_id,related_lead_business_id
+1,opted_out_lead_contacted,task,19485,32,2025-03-07T18:00:00,opt_out_contacted_task_19485,"{""lead_id"": 32}",,LEAD-2026-000032
+2,opted_out_lead_contacted,task,19486,33,2025-03-07T18:00:00,opt_out_contacted_task_19486,"{""lead_id"": 33}",,LEAD-2026-000033
+3,opted_out_lead_contacted,task,19487,34,2025-03-07T18:00:00,opt_out_contacted_task_19487,"{""lead_id"": 34}",,LEAD-2026-000034
+4,opted_out_lead_contacted,task,19488,35,2025-03-07T18:00:00,opt_out_contacted_task_19488,"{""lead_id"": 35}",,LEAD-2026-000035
+5,opted_out_lead_contacted,task,19489,39,2025-03-07T18:00:00,opt_out_contacted_task_19489,"{""lead_id"": 39}",,LEAD-2026-000039
+6,opted_out_lead_contacted,task,19490,41,2025-03-07T18:00:00,opt_out_contacted_task_19490,"{""lead_id"": 41}",,LEAD-2026-000041
+7,opted_out_lead_contacted,task,19491,67,2025-03-07T18:00:00,opt_out_contacted_task_19491,"{""lead_id"": 67}",,LEAD-2026-000067
+8,opted_out_lead_contacted,task,19492,75,2025-03-07T18:00:00,opt_out_contacted_task_19492,"{""lead_id"": 75}",,LEAD-2026-000075
+9,opted_out_lead_contacted,task,19493,80,2025-03-07T18:00:00,opt_out_contacted_task_19493,"{""lead_id"": 80}",,LEAD-2026-000080
+10,opted_out_lead_contacted,task,19494,82,2025-03-07T18:00:00,opt_out_contacted_task_19494,"{""lead_id"": 82}",,LEAD-2026-000082
+11,opted_out_lead_contacted,task,19495,83,2025-03-07T18:00:00,opt_out_contacted_task_19495,"{""lead_id"": 83}",,LEAD-2026-000083
+12,opted_out_lead_contacted,task,19496,90,2025-03-07T18:00:00,opt_out_contacted_task_19496,"{""lead_id"": 90}",,LEAD-2026-000090
+13,opted_out_lead_contacted,task,19497,99,2025-03-07T18:00:00,opt_out_contacted_task_19497,"{""lead_id"": 99}",,LEAD-2026-000099
+14,opted_out_lead_contacted,task,19498,110,2025-03-07T18:00:00,opt_out_contacted_task_19498,"{""lead_id"": 110}",,LEAD-2026-000110
+15,opted_out_lead_contacted,task,19499,113,2025-03-07T18:00:00,opt_out_contacted_task_19499,"{""lead_id"": 113}",,LEAD-2026-000113
+16,opted_out_lead_contacted,task,19500,161,2025-03-07T18:00:00,opt_out_contacted_task_19500,"{""lead_id"": 161}",,LEAD-2026-000161
+17,opted_out_lead_contacted,task,19501,175,2025-03-07T18:00:00,opt_out_contacted_task_19501,"{""lead_id"": 175}",,LEAD-2026-000175
+18,opted_out_lead_contacted,task,19502,180,2025-03-07T18:00:00,opt_out_contacted_task_19502,"{""lead_id"": 180}",,LEAD-2026-000180
+19,opted_out_lead_contacted,task,19503,187,2025-03-07T18:00:00,opt_out_contacted_task_19503,"{""lead_id"": 187}",,LEAD-2026-000187
+20,opted_out_lead_contacted,task,19504,237,2025-03-07T18:00:00,opt_out_contacted_task_19504,"{""lead_id"": 237}",,LEAD-2026-000237
+21,score_uses_post_conversion_event,lead_score_explanation,19485,2,2025-03-07T18:00:00,temporal_leakage_expl_19485,"{""activity_business_id"": ""ACT-LEAD-2026-000002-028"", ""activity_event_time"": ""2025-03-06T15:00:00"", ""scored_at"": ""2025-03-07T15:00:00"", ""converted_at"": ""2025-03-05T15:00:00""}",,LEAD-2026-000002
+22,score_uses_post_conversion_event,lead_score_explanation,19486,17,2025-03-07T18:00:00,temporal_leakage_expl_19486,"{""activity_business_id"": ""ACT-LEAD-2026-000017-024"", ""activity_event_time"": ""2025-03-06T15:00:00"", ""scored_at"": ""2025-03-07T15:00:00"", ""converted_at"": ""2025-03-05T15:00:00""}",,LEAD-2026-000017
+23,score_uses_post_conversion_event,lead_score_explanation,19487,21,2025-03-07T18:00:00,temporal_leakage_expl_19487,"{""activity_business_id"": ""ACT-LEAD-2026-000021-016"", ""activity_event_time"": ""2025-03-06T15:00:00"", ""scored_at"": ""2025-03-07T15:00:00"", ""converted_at"": ""2025-03-05T15:00:00""}",,LEAD-2026-000021
+24,score_uses_post_conversion_event,lead_score_explanation,19488,24,2025-03-07T18:00:00,temporal_leakage_expl_19488,"{""activity_business_id"": ""ACT-LEAD-2026-000024-018"", ""activity_event_time"": ""2025-03-06T15:00:00"", ""scored_at"": ""2025-03-07T15:00:00"", ""converted_at"": ""2025-03-05T15:00:00""}",,LEAD-2026-000024
+25,score_uses_post_conversion_event,lead_score_explanation,19489,26,2025-03-07T18:00:00,temporal_leakage_expl_19489,"{""activity_business_id"": ""ACT-LEAD-2026-000026-026"", ""activity_event_time"": ""2025-03-06T15:00:00"", ""scored_at"": ""2025-03-07T15:00:00"", ""converted_at"": ""2025-03-05T15:00:00""}",,LEAD-2026-000026
+26,score_uses_post_conversion_event,lead_score_explanation,19490,27,2025-03-07T18:00:00,temporal_leakage_expl_19490,"{""activity_business_id"": ""ACT-LEAD-2026-000027-020"", ""activity_event_time"": ""2025-03-06T15:00:00"", ""scored_at"": ""2025-03-07T15:00:00"", ""converted_at"": ""2025-03-05T15:00:00""}",,LEAD-2026-000027
+27,score_uses_post_conversion_event,lead_score_explanation,19491,33,2025-03-07T18:00:00,temporal_leakage_expl_19491,"{""activity_business_id"": ""ACT-LEAD-2026-000033-011"", ""activity_event_time"": ""2025-03-06T15:00:00"", ""scored_at"": ""2025-03-07T15:00:00"", ""converted_at"": ""2025-03-05T15:00:00""}",,LEAD-2026-000033
+28,score_uses_post_conversion_event,lead_score_explanation,19492,40,2025-03-07T18:00:00,temporal_leakage_expl_19492,"{""activity_business_id"": ""ACT-LEAD-2026-000040-022"", ""activity_event_time"": ""2025-03-06T15:00:00"", ""scored_at"": ""2025-03-07T15:00:00"", ""converted_at"": ""2025-03-05T15:00:00""}",,LEAD-2026-000040
+29,score_uses_post_conversion_event,lead_score_explanation,19493,42,2025-03-07T18:00:00,temporal_leakage_expl_19493,"{""activity_business_id"": ""ACT-LEAD-2026-000042-014"", ""activity_event_time"": ""2025-03-06T15:00:00"", ""scored_at"": ""2025-03-07T15:00:00"", ""converted_at"": ""2025-03-05T15:00:00""}",,LEAD-2026-000042
+30,score_uses_post_conversion_event,lead_score_explanation,19494,49,2025-03-07T18:00:00,temporal_leakage_expl_19494,"{""activity_business_id"": ""ACT-LEAD-2026-000049-013"", ""activity_event_time"": ""2025-03-06T15:00:00"", ""scored_at"": ""2025-03-07T15:00:00"", ""converted_at"": ""2025-03-05T15:00:00""}",,LEAD-2026-000049
+31,score_uses_post_conversion_event,lead_score_explanation,19495,82,2025-03-07T18:00:00,temporal_leakage_expl_19495,"{""activity_business_id"": ""ACT-LEAD-2026-000082-043"", ""activity_event_time"": ""2025-03-06T15:00:00"", ""scored_at"": ""2025-03-07T15:00:00"", ""converted_at"": ""2025-03-05T15:00:00""}",,LEAD-2026-000082
+32,score_uses_post_conversion_event,lead_score_explanation,19496,83,2025-03-07T18:00:00,temporal_leakage_expl_19496,"{""activity_business_id"": ""ACT-LEAD-2026-000083-028"", ""activity_event_time"": ""2025-03-06T15:00:00"", ""scored_at"": ""2025-03-07T15:00:00"", ""converted_at"": ""2025-03-05T15:00:00""}",,LEAD-2026-000083
+33,score_uses_post_conversion_event,lead_score_explanation,19497,87,2025-03-07T18:00:00,temporal_leakage_expl_19497,"{""activity_business_id"": ""ACT-LEAD-2026-000087-016"", ""activity_event_time"": ""2025-03-06T15:00:00"", ""scored_at"": ""2025-03-07T15:00:00"", ""converted_at"": ""2025-03-05T15:00:00""}",,LEAD-2026-000087
+34,score_uses_post_conversion_event,lead_score_explanation,19498,90,2025-03-07T18:00:00,temporal_leakage_expl_19498,"{""activity_business_id"": ""ACT-LEAD-2026-000090-019"", ""activity_event_time"": ""2025-03-06T15:00:00"", ""scored_at"": ""2025-03-07T15:00:00"", ""converted_at"": ""2025-03-05T15:00:00""}",,LEAD-2026-000090
+35,score_uses_post_conversion_event,lead_score_explanation,19499,95,2025-03-07T18:00:00,temporal_leakage_expl_19499,"{""activity_business_id"": ""ACT-LEAD-2026-000095-023"", ""activity_event_time"": ""2025-03-06T15:00:00"", ""scored_at"": ""2025-03-07T15:00:00"", ""converted_at"": ""2025-03-05T15:00:00""}",,LEAD-2026-000095
+36,lead_assigned_outside_territory,lead,1,1,2025-03-07T18:00:00,territory_mismatch_lead_1,"{""wrong_rep"": 2}",LEAD-2026-000001,LEAD-2026-000001
+37,lead_assigned_outside_territory,lead,2,2,2025-03-07T18:00:00,territory_mismatch_lead_2,"{""wrong_rep"": 2}",LEAD-2026-000002,LEAD-2026-000002
+38,lead_assigned_outside_territory,lead,3,3,2025-03-07T18:00:00,territory_mismatch_lead_3,"{""wrong_rep"": 2}",LEAD-2026-000003,LEAD-2026-000003
+39,lead_assigned_outside_territory,lead,4,4,2025-03-07T18:00:00,territory_mismatch_lead_4,"{""wrong_rep"": 2}",LEAD-2026-000004,LEAD-2026-000004
+40,lead_assigned_outside_territory,lead,5,5,2025-03-07T18:00:00,territory_mismatch_lead_5,"{""wrong_rep"": 2}",LEAD-2026-000005,LEAD-2026-000005
+41,lead_assigned_outside_territory,lead,6,6,2025-03-07T18:00:00,territory_mismatch_lead_6,"{""wrong_rep"": 2}",LEAD-2026-000006,LEAD-2026-000006
+42,lead_assigned_outside_territory,lead,7,7,2025-03-07T18:00:00,territory_mismatch_lead_7,"{""wrong_rep"": 3}",LEAD-2026-000007,LEAD-2026-000007
+43,lead_assigned_outside_territory,lead,8,8,2025-03-07T18:00:00,territory_mismatch_lead_8,"{""wrong_rep"": 2}",LEAD-2026-000008,LEAD-2026-000008
+44,lead_assigned_outside_territory,lead,9,9,2025-03-07T18:00:00,territory_mismatch_lead_9,"{""wrong_rep"": 2}",LEAD-2026-000009,LEAD-2026-000009
+45,lead_assigned_outside_territory,lead,10,10,2025-03-07T18:00:00,territory_mismatch_lead_10,"{""wrong_rep"": 2}",LEAD-2026-000010,LEAD-2026-000010
+46,lead_assigned_outside_territory,lead,11,11,2025-03-07T18:00:00,territory_mismatch_lead_11,"{""wrong_rep"": 2}",LEAD-2026-000011,LEAD-2026-000011
+47,lead_assigned_outside_territory,lead,12,12,2025-03-07T18:00:00,territory_mismatch_lead_12,"{""wrong_rep"": 2}",LEAD-2026-000012,LEAD-2026-000012
+48,lead_assigned_outside_territory,lead,13,13,2025-03-07T18:00:00,territory_mismatch_lead_13,"{""wrong_rep"": 2}",LEAD-2026-000013,LEAD-2026-000013
+49,lead_assigned_outside_territory,lead,14,14,2025-03-07T18:00:00,territory_mismatch_lead_14,"{""wrong_rep"": 2}",LEAD-2026-000014,LEAD-2026-000014
+50,lead_assigned_outside_territory,lead,15,15,2025-03-07T18:00:00,territory_mismatch_lead_15,"{""wrong_rep"": 2}",LEAD-2026-000015,LEAD-2026-000015
+51,duplicate_creates_duplicate_opportunity,opportunity,2991,2,2025-03-07T18:00:00,dup_opp_2991,{},OPP-2026-002991,LEAD-2026-000002
+52,duplicate_creates_duplicate_opportunity,opportunity,2992,17,2025-03-07T18:00:00,dup_opp_2992,{},OPP-2026-002992,LEAD-2026-000017
+53,duplicate_creates_duplicate_opportunity,opportunity,2993,21,2025-03-07T18:00:00,dup_opp_2993,{},OPP-2026-002993,LEAD-2026-000021
+54,duplicate_creates_duplicate_opportunity,opportunity,2994,24,2025-03-07T18:00:00,dup_opp_2994,{},OPP-2026-002994,LEAD-2026-000024
+55,duplicate_creates_duplicate_opportunity,opportunity,2995,26,2025-03-07T18:00:00,dup_opp_2995,{},OPP-2026-002995,LEAD-2026-000026
+56,duplicate_creates_duplicate_opportunity,opportunity,2996,27,2025-03-07T18:00:00,dup_opp_2996,{},OPP-2026-002996,LEAD-2026-000027
+57,duplicate_creates_duplicate_opportunity,opportunity,2997,33,2025-03-07T18:00:00,dup_opp_2997,{},OPP-2026-002997,LEAD-2026-000033
+58,duplicate_creates_duplicate_opportunity,opportunity,2998,40,2025-03-07T18:00:00,dup_opp_2998,{},OPP-2026-002998,LEAD-2026-000040
+59,duplicate_creates_duplicate_opportunity,opportunity,2999,42,2025-03-07T18:00:00,dup_opp_2999,{},OPP-2026-002999,LEAD-2026-000042
+60,duplicate_creates_duplicate_opportunity,opportunity,3000,49,2025-03-07T18:00:00,dup_opp_3000,{},OPP-2026-003000,LEAD-2026-000049
+61,stage_history_has_gaps,opportunity,1,17844,2025-03-07T18:00:00,stage_gap_opp_1,{},OPP-2026-000001,LEAD-2026-017844
+62,stage_history_has_gaps,opportunity,2,2087,2025-03-07T18:00:00,stage_gap_opp_2,{},OPP-2026-000002,LEAD-2026-002087
+63,stage_history_has_gaps,opportunity,3,5348,2025-03-07T18:00:00,stage_gap_opp_3,{},OPP-2026-000003,LEAD-2026-005348
+64,stage_history_has_gaps,opportunity,4,9399,2025-03-07T18:00:00,stage_gap_opp_4,{},OPP-2026-000004,LEAD-2026-009399
+65,stage_history_has_gaps,opportunity,5,9398,2025-03-07T18:00:00,stage_gap_opp_5,{},OPP-2026-000005,LEAD-2026-009398
+66,stage_history_has_gaps,opportunity,6,18950,2025-03-07T18:00:00,stage_gap_opp_6,{},OPP-2026-000006,LEAD-2026-018950
+67,stage_history_has_gaps,opportunity,7,5873,2025-03-07T18:00:00,stage_gap_opp_7,{},OPP-2026-000007,LEAD-2026-005873
+68,stage_history_has_gaps,opportunity,8,15023,2025-03-07T18:00:00,stage_gap_opp_8,{},OPP-2026-000008,LEAD-2026-015023
+69,stage_history_has_gaps,opportunity,9,5335,2025-03-07T18:00:00,stage_gap_opp_9,{},OPP-2026-000009,LEAD-2026-005335
+70,stage_history_has_gaps,opportunity,10,15016,2025-03-07T18:00:00,stage_gap_opp_10,{},OPP-2026-000010,LEAD-2026-015016
+71,stage_history_has_gaps,opportunity,11,16653,2025-03-07T18:00:00,stage_gap_opp_11,{},OPP-2026-000011,LEAD-2026-016653
+72,stage_history_has_gaps,opportunity,12,15019,2025-03-07T18:00:00,stage_gap_opp_12,{},OPP-2026-000012,LEAD-2026-015019
+73,stage_history_has_gaps,opportunity,13,15310,2025-03-07T18:00:00,stage_gap_opp_13,{},OPP-2026-000013,LEAD-2026-015310
+74,stage_history_has_gaps,opportunity,14,15355,2025-03-07T18:00:00,stage_gap_opp_14,{},OPP-2026-000014,LEAD-2026-015355
+75,stage_history_has_gaps,opportunity,15,10876,2025-03-07T18:00:00,stage_gap_opp_15,{},OPP-2026-000015,LEAD-2026-010876

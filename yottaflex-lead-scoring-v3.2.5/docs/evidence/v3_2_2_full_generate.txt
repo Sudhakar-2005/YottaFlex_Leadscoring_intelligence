@@ -1,0 +1,40 @@
+2026-11-05T17:33:21+0530 | INFO    | yottaflex.pipeline | === STEP A: data generation ===
+2026-11-05T17:34:52+0530 | INFO    | yottaflex.pipeline | === STEP B: validation ===
+2026-11-05T17:34:52+0530 | INFO    | yottaflex.pipeline | === STEP B2: deduplication ===
+2026-11-05T17:34:55+0530 | INFO    | yottaflex.deduplication | lead duplicate pairs: 516
+2026-11-05T17:34:57+0530 | INFO    | yottaflex.pipeline | === STEP C: scoring ===
+2026-11-05T17:36:33+0530 | INFO    | yottaflex.scoring | scored 19484 leads at 2025-03-03T12:00:00
+2026-11-05T17:36:33+0530 | INFO    | yottaflex.pipeline | === STEP F/G: routing & assignment ===
+2026-11-05T17:37:48+0530 | INFO    | yottaflex.assignment | assigned=19484 unassignable=0
+2026-11-05T17:37:48+0530 | INFO    | yottaflex.pipeline | === STEP E/H: consent + follow-up tasks ===
+2026-11-05T17:38:55+0530 | INFO    | yottaflex.tasks | tasks created=14746 blocked=4738 skipped_cold=0 skipped_exists=0
+2026-11-05T17:38:55+0530 | INFO    | yottaflex.consent | blocked tasks for consent: 0
+2026-11-05T17:38:55+0530 | INFO    | yottaflex.pipeline | === STEP I/J: opportunities & stage history ===
+2026-11-05T17:39:10+0530 | INFO    | yottaflex.opportunity | opportunities created=2975 (primary=2975 natural_dupes=15 target remaining 2990)
+2026-11-05T17:39:12+0530 | INFO    | yottaflex.pipeline | === STEP K: baseline exception detection ===
+2026-11-05T17:39:22+0530 | INFO    | yottaflex.exceptions | detector opted_out_lead_contacted -> 0
+2026-11-05T17:39:22+0530 | INFO    | yottaflex.exceptions | detector score_uses_post_conversion_event -> 0
+2026-11-05T17:39:29+0530 | INFO    | yottaflex.exceptions | detector lead_assigned_outside_territory -> 0
+2026-11-05T17:39:29+0530 | INFO    | yottaflex.exceptions | detector duplicate_creates_duplicate_opportunity -> 15
+2026-11-05T17:39:30+0530 | INFO    | yottaflex.exceptions | detector stage_history_has_gaps -> 0
+2026-11-05T17:39:30+0530 | INFO    | yottaflex.pipeline | === ANOMALY INJECTION ===
+2026-11-05T17:39:31+0530 | INFO    | yottaflex.anomaly_injection | injected anomalies: {'opted_out_contacted': 20, 'temporal_leakage': 15, 'territory_mismatch': 15, 'duplicate_opportunity': 10, 'stage_history_gap': 15}
+2026-11-05T17:39:31+0530 | INFO    | yottaflex.pipeline | === STEP K: post-injection exception detection ===
+2026-11-05T17:39:40+0530 | INFO    | yottaflex.exceptions | detector opted_out_lead_contacted -> 20
+2026-11-05T17:39:40+0530 | INFO    | yottaflex.exceptions | detector score_uses_post_conversion_event -> 15
+2026-11-05T17:39:44+0530 | INFO    | yottaflex.exceptions | detector lead_assigned_outside_territory -> 15
+2026-11-05T17:39:44+0530 | INFO    | yottaflex.exceptions | detector duplicate_creates_duplicate_opportunity -> 25
+2026-11-05T17:39:45+0530 | INFO    | yottaflex.exceptions | detector stage_history_has_gaps -> 15
+2026-11-05T17:39:46+0530 | INFO    | yottaflex.pipeline | === STEP L: final analytics ===
+2026-11-05T17:40:09+0530 | INFO    | yottaflex.exporter | exported 34 files to C:\Users\acer\yottaflex-lead-scoring-v3.2.2\data\exports
+2026-11-05T17:40:09+0530 | INFO    | yottaflex.pipeline | exported 33 files to C:\Users\acer\yottaflex-lead-scoring-v3.2.2\data\exports
+2026-11-05T17:40:09+0530 | INFO    | yottaflex.pipeline | wrote C:\Users\acer\yottaflex-lead-scoring-v3.2.2\data\reports\pipeline_result.json
+generate: OK
+scale: full, seed: 20261022
+opportunities: {'created': 2975, 'natural_duplicate_opportunities': 15, 'existing_after': 2990, 'target': 2990, 'advancement': {'qualified': 2975, 'demo': 2518, 'proposal': 2102, 'won': 1545, 'lost': 1063, 'open': 367}}
+injected: {'opted_out_contacted': 20, 'temporal_leakage': 15, 'territory_mismatch': 15, 'duplicate_opportunity': 10, 'stage_history_gap': 15}
+baseline_exceptions: {'count': 15, 'by_type': {'duplicate_creates_duplicate_opportunity': 15}}
+exceptions: {'count': 90, 'by_type': {'opted_out_lead_contacted': 20, 'score_uses_post_conversion_event': 15, 'lead_assigned_outside_territory': 15, 'duplicate_creates_duplicate_opportunity': 25, 'stage_history_has_gaps': 15}}
+evaluation P/R/F1: 1.0 / 1.0 / 1.0
+exports written: 33 files under data/exports
+

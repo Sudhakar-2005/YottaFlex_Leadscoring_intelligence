@@ -1,0 +1,16 @@
+=== fresh restore ===
+restoring 7 files from C:\Users\acer\yottaflex-lead-scoring-v3.2.2\data\exports\sql into temp database C:\Users\acer\AppData\Local\Temp\opencode\v322_restore\restored.db.tmp-restore.2236.db
+OK: schema verified (23 tables, column sets match)
+OK: row counts match dataset_manifest.json for all 23 tables
+OK: PRAGMA foreign_key_check clean
+OK: row counts match source for all tables
+OK: 577323 rows restored across 23 tables
+OK: target database replaced atomically: C:\Users\acer\AppData\Local\Temp\opencode\v322_restore\restored.db
+RESTORATION: PASS
+exit=0
+
+=== no --force ===
+REFUSED: target database already exists (C:\Users\acer\AppData\Local\Temp\opencode\v322_restore\restored.db, 172.0 MB).
+Refusing to overwrite without explicit permission.
+Re-run with --force to allow overwrite, or choose a different --db path.
+exit=3

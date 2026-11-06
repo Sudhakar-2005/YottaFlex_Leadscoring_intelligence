@@ -1,0 +1,243 @@
+{
+  "passed": true,
+  "validation_report": {
+    "passed": true,
+    "checks_run": 24,
+    "critical_count": 0,
+    "total_issues": 25,
+    "counts": {
+      "company": 5000,
+      "contact": 10000,
+      "lead": 20000,
+      "campaign": 30,
+      "activity": 320971,
+      "consent": 57033,
+      "salesrep": 80,
+      "task": 19504,
+      "opportunity": 3000,
+      "score_rule": 14,
+      "stage_history": 13218
+    },
+    "issues": [
+      {
+        "check": "single_open_opportunity",
+        "entity": "opportunity",
+        "record_id": 2,
+        "severity": "high",
+        "message": "lead 2 has 2 opportunities"
+      },
+      {
+        "check": "single_open_opportunity",
+        "entity": "opportunity",
+        "record_id": 17,
+        "severity": "high",
+        "message": "lead 17 has 2 opportunities"
+      },
+      {
+        "check": "single_open_opportunity",
+        "entity": "opportunity",
+        "record_id": 21,
+        "severity": "high",
+        "message": "lead 21 has 2 opportunities"
+      },
+      {
+        "check": "single_open_opportunity",
+        "entity": "opportunity",
+        "record_id": 24,
+        "severity": "high",
+        "message": "lead 24 has 2 opportunities"
+      },
+      {
+        "check": "single_open_opportunity",
+        "entity": "opportunity",
+        "record_id": 26,
+        "severity": "high",
+        "message": "lead 26 has 2 opportunities"
+      },
+      {
+        "check": "single_open_opportunity",
+        "entity": "opportunity",
+        "record_id": 27,
+        "severity": "high",
+        "message": "lead 27 has 2 opportunities"
+      },
+      {
+        "check": "single_open_opportunity",
+        "entity": "opportunity",
+        "record_id": 33,
+        "severity": "high",
+        "message": "lead 33 has 2 opportunities"
+      },
+      {
+        "check": "single_open_opportunity",
+        "entity": "opportunity",
+        "record_id": 40,
+        "severity": "high",
+        "message": "lead 40 has 2 opportunities"
+      },
+      {
+        "check": "single_open_opportunity",
+        "entity": "opportunity",
+        "record_id": 42,
+        "severity": "high",
+        "message": "lead 42 has 2 opportunities"
+      },
+      {
+        "check": "single_open_opportunity",
+        "entity": "opportunity",
+        "record_id": 49,
+        "severity": "high",
+        "message": "lead 49 has 2 opportunities"
+      },
+      {
+        "check": "single_open_opportunity",
+        "entity": "opportunity",
+        "record_id": 571,
+        "severity": "high",
+        "message": "lead 571 has 2 opportunities"
+      },
+      {
+        "check": "single_open_opportunity",
+        "entity": "opportunity",
+        "record_id": 1176,
+        "severity": "high",
+        "message": "lead 1176 has 2 opportunities"
+      },
+      {
+        "check": "single_open_opportunity",
+        "entity": "opportunity",
+        "record_id": 3046,
+        "severity": "high",
+        "message": "lead 3046 has 2 opportunities"
+      },
+      {
+        "check": "single_open_opportunity",
+        "entity": "opportunity",
+        "record_id": 6731,
+        "severity": "high",
+        "message": "lead 6731 has 2 opportunities"
+      },
+      {
+        "check": "single_open_opportunity",
+        "entity": "opportunity",
+        "record_id": 6787,
+        "severity": "high",
+        "message": "lead 6787 has 2 opportunities"
+      },
+      {
+        "check": "single_open_opportunity",
+        "entity": "opportunity",
+        "record_id": 9992,
+        "severity": "high",
+        "message": "lead 9992 has 2 opportunities"
+      },
+      {
+        "check": "single_open_opportunity",
+        "entity": "opportunity",
+        "record_id": 10425,
+        "severity": "high",
+        "message": "lead 10425 has 2 opportunities"
+      },
+      {
+        "check": "single_open_opportunity",
+        "entity": "opportunity",
+        "record_id": 10436,
+        "severity": "high",
+        "message": "lead 10436 has 2 opportunities"
+      },
+      {
+        "check": "single_open_opportunity",
+        "entity": "opportunity",
+        "record_id": 10858,
+        "severity": "high",
+        "message": "lead 10858 has 2 opportunities"
+      },
+      {
+        "check": "single_open_opportunity",
+        "entity": "opportunity",
+        "record_id": 13482,
+        "severity": "high",
+        "message": "lead 13482 has 2 opportunities"
+      },
+      {
+        "check": "single_open_opportunity",
+        "entity": "opportunity",
+        "record_id": 14991,
+        "severity": "high",
+        "message": "lead 14991 has 2 opportunities"
+      },
+      {
+        "check": "single_open_opportunity",
+        "entity": "opportunity",
+        "record_id": 16881,
+        "severity": "high",
+        "message": "lead 16881 has 2 opportunities"
+      },
+      {
+        "check": "single_open_opportunity",
+        "entity": "opportunity",
+        "record_id": 16957,
+        "severity": "high",
+        "message": "lead 16957 has 2 opportunities"
+      },
+      {
+        "check": "single_open_opportunity",
+        "entity": "opportunity",
+        "record_id": 17214,
+        "severity": "high",
+        "message": "lead 17214 has 2 opportunities"
+      },
+      {
+        "check": "single_open_opportunity",
+        "entity": "opportunity",
+        "record_id": 17844,
+        "severity": "high",
+        "message": "lead 17844 has 2 opportunities"
+      }
+    ]
+  },
+  "checks": {
+    "opportunity_count_exact": true,
+    "opportunity_count": 3000,
+    "bid_format": {
+      "company": {
+        "total": 5000,
+        "invalid": 0,
+        "samples": []
+      },
+      "contact": {
+        "total": 10000,
+        "invalid": 0,
+        "samples": []
+      },
+      "lead": {
+        "total": 20000,
+        "invalid": 0,
+        "samples": []
+      },
+      "opportunity": {
+        "total": 3000,
+        "invalid": 0,
+        "samples": []
+      },
+      "activity": {
+        "total": 320971,
+        "invalid": 0,
+        "samples": []
+      },
+      "task": {
+        "total": 19504,
+        "invalid": 0,
+        "samples": []
+      }
+    },
+    "bid_format_all_valid": true,
+    "duplicate_gt_by_origin": {
+      "injected": 10,
+      "natural": 741
+    },
+    "stage_timestamps_collapsed": 0,
+    "opportunities_without_history": 0
+  }
+}
+

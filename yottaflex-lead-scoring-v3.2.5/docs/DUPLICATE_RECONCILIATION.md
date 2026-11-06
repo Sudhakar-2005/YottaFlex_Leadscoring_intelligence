@@ -1,0 +1,81 @@
+# Duplicate Reconciliation Report (V3 Phase 2)
+
+Generated from actual `data/exports/duplicate_gt.csv` and table CSVs.
+
+## 1. Configured vs actual (all entities)
+
+| Entity | Config (natural) | GT rows | Groups | Duplicate records | Extra vs config |
+|---|---|---|---|---|---|
+| company | 60 | 60 | 60 | 60 | 0 |
+| contact | 150 | 150 | 150 | 150 | 0 |
+| lead | 400 | 516 | 515 | 516 | 116 |
+| opportunity | 15 natural + injected EX-04 | 25 (natural 15 + injected 10) | 25 | 25 | 10 extra (injected) |
+
+## 2. Lead reconciliation — configured 400 vs actual 516
+
+- Config: `duplicates.natural_duplicate_leads = 400` of 20,000 leads (last 400 slots; stride selection over the first 19,600).
+- Actual duplicate ground-truth rows (leads): **516** = 400 configured copies + **116** additional matches.
+
+### Why the extra 116 exist (not fabricated — actual data analysis)
+
+
+Every extra duplicate lead sits in a shared-email group of size 2 where *both* members are inside the
+unique phase (lead_id ≤ 19,600). Explanation, verified against `contact.csv`:
+
+- In the unique phase, ~50% of leads are created as *contact-linked*: they copy `first_name`,
+  `last_name`, and `email_normalized` from their linked contact (data_generator.py `contact_link_flags`).
+- The generator guards lead-email uniqueness for standalone leads, but *contact-linked* leads keep the
+  contact's email — and contact emails themselves repeat because contact generation copies emails for its
+  own natural duplicates AND generates contacts from ~10K pools (birthday-paradox collisions in
+  first/last/contact combinations). Where two contacts share an email (contact GT, 150 natural +
+  additional same-email pairs), their linked leads inherit the shared email — forming a duplicate
+  lead group with no configured duplicate copy.
+- Hence 116 email groups were created *as artifacts of contact-email sharing*, not of lead duplication.
+
+**516 = 400 configured copies + 116 contact-derived shared-email groups.**
+
+### Group-size cross-check (lead.csv, actual)
+- Groups with >1 lead sharing an email: 515 (size histogram: {2: 514, 3: 1}).
+- Non-primary records inside groups: 516 (= 516 GT rows).
+- One triple: `james.anderson315@vertexnetworks1775.net` — 1 configured source (lead 8737) copied once (19903) + 1 contact-derived extra (16007) = 3 members, 2 GT rows, 1 group.
+
+## 3. Configured copies decompose fully
+
+- 400 of 400 configured slots land in email groups >1 (400).
+- Source stride `(k * 53) % 19,600` for k=0..399 selects 400 *distinct* sources — no source collisions; each configured copy creates exactly one GT row.
+- Distinct email groups: 515 = 400 configured-copy groups + 116 contact-derived groups − 1 overlap (the triple `james.anderson315@...` holds both a configured copy (19903) and a contact-derived extra (16007) — 2 GT rows, 1 group).
+
+## 4. Company / contact / opportunity
+
+- company: GT rows 60 == configured 60 — exact match, no cross-entity effects (domain walk / email replay loops are unique-for-non-dupes).
+- contact: GT rows 150 == configured 150 — exact match, no cross-entity effects (domain walk / email replay loops are unique-for-non-dupes).
+- opportunity: GT rows 25 = natural 15 (config 15) + injected 10 (EX-04 quota). Reconciles exactly.
+
+## 5. What goes into reports (actuals only)
+
+| Report | Reports |
+|---|---|
+| dataset_manifest.json `natural_duplicates` | *configured intent* (verbatim settings) |
+| duplicate_gt.csv / ground_truth.json | *actual* ground-truth rows per entity/origin |
+| Validation / analytics duplicate_detection_rate | actual detected / actual GT (751/751) |
+
+No count is edited to force a match; manifests carry intent, GT tables carry fact.
+
+## 6. Extra-duplicate sample (actual examples)
+
+| lead_id | primary_id | email | mechanism |
+|---|---|---|---|
+| 428 | 378 | james.wright109@atlasmedia4468.tech | contact-derived email (lead was created by copying its linked contact) |
+| 2521 | 1411 | camila.anderson88@embernetworks469.com | contact-derived email (lead was created by copying its linked contact) |
+| 2671 | 872 | benjamin.ramirez713@atlassolutions1344.ai | contact-derived email (lead was created by copying its linked contact) |
+| 3057 | 512 | james.martinez905@vertexindustries2236.com | contact-derived email (lead was created by copying its linked contact) |
+| 3358 | 2546 | nora.wilson842@driftsystems4277.ai | contact-derived email (lead was created by copying its linked contact) |
+
+## 7. Detection alignment
+
+- Every GT row is soft-marked at creation/dedup (`detected=true`); EX-04 detector fires on every lead group with >1 opportunity (25 groups = 15 natural + 10 injected).
+- The 116 contact-derived duplicate groups are *data-quality facts*, not generator intent; they are
+  labelled `origin=natural` with `match_key=email_normalized` — indistinguishable from configured copies
+  in GT (both are natural). This is documented here rather than silently absorbed.
+
+*Generated by scripts/reconcile_duplicates.py from current exports.*

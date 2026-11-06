@@ -1,0 +1,15 @@
+score_rule_id,rule_code,dimension,name,description,condition_json,points,weight,priority,effective_from,effective_to,is_active,created_at
+1,FIT_EMPLOYEE_BAND,fit,Employee band fit,ICP prefers 51-1000 employees,"{""type"": ""employee_band_in"", ""values"": [""51-200"", ""201-1000""]}",40,,10,2025-01-01T00:00:00,,true,2025-01-01T00:00:00
+2,FIT_EMPLOYEE_LARGE,fit,Large company bonus,,"{""type"": ""employee_band_in"", ""values"": [""1000+""]}",30,,11,2025-01-01T00:00:00,,true,2025-01-01T00:00:00
+3,FIT_EMPLOYEE_SMALL,fit,Small company partial,,"{""type"": ""employee_band_in"", ""values"": [""1-50""]}",15,,12,2025-01-01T00:00:00,,true,2025-01-01T00:00:00
+4,FIT_INDUSTRY_ICP,fit,ICP industry,,"{""type"": ""industry_in"", ""values"": [""Technology"", ""Finance"", ""Healthcare"", ""Manufacturing"", ""Retail""]}",35,,20,2025-01-01T00:00:00,,true,2025-01-01T00:00:00
+5,FIT_INDUSTRY_OTHER,fit,Non-ICP industry,,"{""type"": ""industry_not_in"", ""values"": [""Technology"", ""Finance"", ""Healthcare"", ""Manufacturing"", ""Retail""]}",10,,21,2025-01-01T00:00:00,,true,2025-01-01T00:00:00
+6,FIT_REVENUE_MID,fit,Mid revenue band,,"{""type"": ""revenue_band_in"", ""values"": [""10M-50M"", ""50M-200M""]}",25,,30,2025-01-01T00:00:00,,true,2025-01-01T00:00:00
+7,INTENT_DEMO_REQUEST,intent,Demo request,,"{""type"": ""activity_count_at_least"", ""activity_types"": [""demo_request""], ""min_count"": 1}",50,,10,2025-01-01T00:00:00,,true,2025-01-01T00:00:00
+8,INTENT_PRICING_INQUIRY,intent,Pricing inquiry,,"{""type"": ""activity_count_at_least"", ""activity_types"": [""pricing_inquiry""], ""min_count"": 1}",35,,20,2025-01-01T00:00:00,,true,2025-01-01T00:00:00
+9,INTENT_FORM_SUBMIT,intent,Form submit,,"{""type"": ""activity_count_at_least"", ""activity_types"": [""form_submit""], ""min_count"": 1}",25,,30,2025-01-01T00:00:00,,true,2025-01-01T00:00:00
+10,INTENT_CONTENT_DOWNLOAD,intent,Content download,,"{""type"": ""activity_count_at_least"", ""activity_types"": [""content_download""], ""min_count"": 1}",15,,40,2025-01-01T00:00:00,,true,2025-01-01T00:00:00
+11,ENG_EMAIL_OPEN,engagement,Email opens,,"{""type"": ""activity_count_scaled"", ""activity_types"": [""email_open""], ""per_count"": 5, ""max_points"": 30}",0,,10,2025-01-01T00:00:00,,true,2025-01-01T00:00:00
+12,ENG_EMAIL_CLICK,engagement,Email clicks,,"{""type"": ""activity_count_scaled"", ""activity_types"": [""email_click""], ""per_count"": 8, ""max_points"": 30}",0,,20,2025-01-01T00:00:00,,true,2025-01-01T00:00:00
+13,ENG_PAGE_VIEW,engagement,Website visits,,"{""type"": ""activity_count_scaled"", ""activity_types"": [""page_view""], ""per_count"": 3, ""max_points"": 25}",0,,30,2025-01-01T00:00:00,,true,2025-01-01T00:00:00
+14,ENG_CONTENT_DOWNLOAD,engagement,Content downloads engagement,,"{""type"": ""activity_count_scaled"", ""activity_types"": [""content_download""], ""per_count"": 10, ""max_points"": 20}",0,,40,2025-01-01T00:00:00,,true,2025-01-01T00:00:00

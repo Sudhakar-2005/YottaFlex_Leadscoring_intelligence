@@ -1,0 +1,11 @@
+product_code,name,product_line
+PROD-AI,YottaAI Assist,AI
+PROD-ANL,YottaAnalytics,Analytics
+PROD-AUT,YottaAutomate,Automation
+PROD-CRM,YottaCRM Core,CRM
+PROD-DAT,YottaData Hub,Data
+PROD-INT,YottaIntegrate,Integration
+PROD-MOB,YottaMobile,Mobile
+PROD-PORT,YottaPortal,Portal
+PROD-SEC,YottaSecure,Security
+PROD-SVC,YottaService Desk,Service

@@ -1,0 +1,88 @@
+seed: 20261022
+base_datetime: "2025-01-01T00:00:00+00:00"
+database_url: "sqlite:///data/yottaflex.db"
+business_id_year: 2026
+
+counts:
+  companies: 5000
+  contacts: 10000
+  leads: 20000
+  opportunities: 3000
+  campaigns: 30
+  sales_reps: 80
+  territories: 16
+  products: 10
+
+scoring:
+  weights:
+    fit: 0.40
+    intent: 0.35
+    engagement: 0.25
+  category_thresholds:
+    hot: 80
+    warm: 60
+    nurture: 40
+  dimension_caps:
+    fit: 100
+    intent: 100
+    engagement: 100
+
+routing:
+  assignment_strategy: "least_loaded_then_id"
+
+tasks:
+  due_days:
+    hot: 1
+    warm: 3
+    nurture: 7
+    cold: 14
+  hot_task_type: "demo"
+  warm_task_type: "call"
+  nurture_task_type: "email"
+  cold_task_type: "email"
+  cold_create_task: true
+
+consent:
+  email_grant_rate: 0.88
+  phone_grant_rate: 0.75
+  revoke_rate_of_granted: 0.10
+
+duplicates:
+  natural_duplicate_companies: 60
+  natural_duplicate_contacts: 150
+  natural_duplicate_leads: 400
+  natural_duplicate_opportunities: 15
+
+evaluation:
+  heldout_fraction: 0.30
+
+opportunity_selection:
+  intent_weight: 0.15
+  engagement_weight: 0.10
+  budget_weight: 0.25
+  fit_weight: 0.10
+  followup_weight: 0.15
+  jitter_weight: 0.25
+
+opportunity_outcomes:
+  open_rate: 0.15
+  base_win_p: 0.20
+  fit_max: 0.20
+  intent_max: 0.25
+  budget_max: 0.15
+  followup_max: 0.10
+  engagement_max: 0.10
+
+anomaly_injection:
+  enabled: true
+  quotas:
+    opted_out_contacted: 20
+    temporal_leakage: 15
+    territory_mismatch: 15
+    duplicate_opportunity: 10
+    stage_history_gap: 15
+
+analytics:
+  eligibility_excluded_statuses:
+    - disqualified
+    - opted_out

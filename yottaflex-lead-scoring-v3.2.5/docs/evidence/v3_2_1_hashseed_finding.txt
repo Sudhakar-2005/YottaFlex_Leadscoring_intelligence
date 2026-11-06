@@ -1,0 +1,51 @@
+# Cross-process determinism finding (discovered during V3.2.1 validation)
+
+Status: OPEN - documented, NOT fixed (out of V3.2.1 scope; touches data generation).
+Impact: `salesrep_territory` bridge rows receive different autoincrement ids depending
+on the Python process hash seed, because `generate_reference_data` iterates a `set`
+of territory codes (`for tc in covered:` in `src/yottaflex/engines/data_generator.py`).
+Consequently `salesrep_territory.csv`, `sql/01_master_data.sql`, `checksums.json` and
+`pipeline_result.json` differ byte-wise ACROSS processes while being identical WITHIN
+one process. All other tables are cross-process deterministic (verified: only these
+4 files differed when comparing the committed V3.2 exports against a fresh
+regeneration; the (rep, territory, role) content SETS are identical - only row ids /
+insertion order vary).
+
+Evidence - controlled experiment (mini scale, three separate Python processes,
+  PYTHONDONTWRITEBYTECODE=1; exports written to temp dirs):
+
+```
+=== process A (PYTHONHASHSEED=1) ===
+PYTHONHASHSEED=1 salesrep_territory.csv sha256=e1ecf60fbb1c350893703bc1...
+=== process B (PYTHONHASHSEED=2) ===
+PYTHONHASHSEED=2 salesrep_territory.csv sha256=3123e00d6cf8a8c3ebcde4e6...
+=== process A2 (PYTHONHASHSEED=1, repeat) ===
+PYTHONHASHSEED=1 salesrep_territory.csv sha256=e1ecf60fbb1c350893703bc1...
+=== comparison ===
+A == B  : False  (different hash seeds)
+A == A2 : True  (same hash seed)
+```
+
+Evidence - content equivalence (committed V3.2 export vs fresh regeneration):
+
+```
+salesrep_territory rows: 202 -> 202
+same (rep,territory,role) content sets: True
+old first rows (id, rep, terr): [('1', '1', 'AMER-W'), ('2', '1', 'AMER-NE'), ('3', '1', 'AMER-SE'), ...]
+new first rows (id, rep, terr): [('1', '1', 'AMER-SE'), ('2', '1', 'AMER-W'), ('3', '1', 'AMER-NE'), ...]
+01_master_data.sql first diff at char 18462 (same INSERT block, different row order)
+```
+
+Notes:
+- The existing `compare_reproducibility.py` runs both generations in ONE process, so it
+  does not exercise cross-process hash-seed variation. All published V3.2 reproducibility
+  evidence remains valid for its stated methodology; this finding extends it.
+- Recommended fix (deferred, needs owner approval because it changes generated ids):
+  iterate `sorted(covered)` in `generate_reference_data` (one-line change), then
+  regenerate exports and rerun the full-scale reproducibility comparison.
+- Workaround for strict cross-run byte identity without code change: run generation with
+  a fixed `PYTHONHASHSEED` (e.g., `PYTHONHASHSEED=0 python scripts/generate_data.py --scale full`).
+
+Recorded: 2026-11-05 (V3.2.1 stabilization). Not fixed by design; owner decision requested.
+
+Owner decision (2026-11-05): keep deferred. L24 remains an accepted backlog item with documented workaround (PYTHONHASHSEED=0) and recommended patch. No further action in the V3.2.x line.

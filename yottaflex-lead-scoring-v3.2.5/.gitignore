@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.coverage
+*.log
+.DS_Store
+.env
+
+# local runtime database files (exports provide reproducibility)
+data/*.db
+data/*.db-journal
+data/*.db-wal
+data/*.db-shm
+data/restored.db
+
+# default output for auxiliary generation runs (V3.2.3 policy)
+data/generated/

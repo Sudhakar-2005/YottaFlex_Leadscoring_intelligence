@@ -1,0 +1,133 @@
+# ScoreRule definitions — dimension points are pre-weight contributions
+# normalized so each dimension caps at 100 before global weights apply.
+rules:
+  # --- FIT ---
+  - rule_code: FIT_EMPLOYEE_BAND
+    dimension: fit
+    name: "Employee band fit"
+    description: "ICP prefers 51-1000 employees"
+    condition_json:
+      type: employee_band_in
+      values: ["51-200", "201-1000"]
+    points: 40
+    priority: 10
+  - rule_code: FIT_EMPLOYEE_LARGE
+    dimension: fit
+    name: "Large company bonus"
+    condition_json:
+      type: employee_band_in
+      values: ["1000+"]
+    points: 30
+    priority: 11
+  - rule_code: FIT_EMPLOYEE_SMALL
+    dimension: fit
+    name: "Small company partial"
+    condition_json:
+      type: employee_band_in
+      values: ["1-50"]
+    points: 15
+    priority: 12
+  - rule_code: FIT_INDUSTRY_ICP
+    dimension: fit
+    name: "ICP industry"
+    condition_json:
+      type: industry_in
+      values: ["Technology", "Finance", "Healthcare", "Manufacturing", "Retail"]
+    points: 35
+    priority: 20
+  - rule_code: FIT_INDUSTRY_OTHER
+    dimension: fit
+    name: "Non-ICP industry"
+    condition_json:
+      type: industry_not_in
+      values: ["Technology", "Finance", "Healthcare", "Manufacturing", "Retail"]
+    points: 10
+    priority: 21
+  - rule_code: FIT_REVENUE_MID
+    dimension: fit
+    name: "Mid revenue band"
+    condition_json:
+      type: revenue_band_in
+      values: ["10M-50M", "50M-200M"]
+    points: 25
+    priority: 30
+
+  # --- INTENT ---
+  - rule_code: INTENT_DEMO_REQUEST
+    dimension: intent
+    name: "Demo request"
+    condition_json:
+      type: activity_count_at_least
+      activity_types: ["demo_request"]
+      min_count: 1
+    points: 50
+    priority: 10
+  - rule_code: INTENT_PRICING_INQUIRY
+    dimension: intent
+    name: "Pricing inquiry"
+    condition_json:
+      type: activity_count_at_least
+      activity_types: ["pricing_inquiry"]
+      min_count: 1
+    points: 35
+    priority: 20
+  - rule_code: INTENT_FORM_SUBMIT
+    dimension: intent
+    name: "Form submit"
+    condition_json:
+      type: activity_count_at_least
+      activity_types: ["form_submit"]
+      min_count: 1
+    points: 25
+    priority: 30
+  - rule_code: INTENT_CONTENT_DOWNLOAD
+    dimension: intent
+    name: "Content download"
+    condition_json:
+      type: activity_count_at_least
+      activity_types: ["content_download"]
+      min_count: 1
+    points: 15
+    priority: 40
+
+  # --- ENGAGEMENT ---
+  - rule_code: ENG_EMAIL_OPEN
+    dimension: engagement
+    name: "Email opens"
+    condition_json:
+      type: activity_count_scaled
+      activity_types: ["email_open"]
+      per_count: 5
+      max_points: 30
+    points: 0
+    priority: 10
+  - rule_code: ENG_EMAIL_CLICK
+    dimension: engagement
+    name: "Email clicks"
+    condition_json:
+      type: activity_count_scaled
+      activity_types: ["email_click"]
+      per_count: 8
+      max_points: 30
+    points: 0
+    priority: 20
+  - rule_code: ENG_PAGE_VIEW
+    dimension: engagement
+    name: "Website visits"
+    condition_json:
+      type: activity_count_scaled
+      activity_types: ["page_view"]
+      per_count: 3
+      max_points: 25
+    points: 0
+    priority: 30
+  - rule_code: ENG_CONTENT_DOWNLOAD
+    dimension: engagement
+    name: "Content downloads engagement"
+    condition_json:
+      type: activity_count_scaled
+      activity_types: ["content_download"]
+      per_count: 10
+      max_points: 20
+    points: 0
+    priority: 40
